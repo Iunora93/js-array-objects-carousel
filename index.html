@@ -9,20 +9,22 @@
 </head>
 <body>
     <div class="container">
-        <div class="container-image">
-            <div class="img-left">
-                <img src="img/01.webp" alt="webp">
-            </div>
-            <div class="img-right">  
-                <div class="container-column-image">         
+        <template id="template-image">   
+            <div class="container-image">
+                <div class="img-left">
+                    <img class="image-left" src="img/01.webp" alt="webp">
+                </div>
+                <div class="img-right">   
+                    <div class="prev"></div>        
                     <img src="img/01.webp" alt="">
                     <img src="img/02.webp" alt="">
                     <img src="img/03.webp" alt="">
                     <img src="img/04.webp" alt="">
                     <img src="img/05.webp" alt=""> 
-                </div>           
+                    <div class="next"></div>            
+                </div>
             </div>
-        </div>
+        </template>
    </div>
     <script src="js/main.js"></script>
 </body>
