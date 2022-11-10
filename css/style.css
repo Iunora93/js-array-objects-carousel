@@ -1,105 +1,70 @@
-* {
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.container {
-    width: 800px;
+body{
     height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-image {
-    width: 100%;
-    display: flex;
-    height: 400px;
-    display: none;
-}
-
-.img-left {
-    width: 70%;
-    height: 100%;
-}
-.img-right {
-    width: 30%; 
-    height: auto;
     display: flex;
     flex-direction: column;
-    position: relative;   
 }
-img{
+
+.container{
     width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-.img-left img{
-    height: 100%;
-}
-
-.img-right img{
-    
-    height: calc(100% / 5);
-    width: 100%;
-}
-
-.prev, .next {
-    width: 20px;
-    height: 20px;
-    margin: 10px 0;
-    border-radius: 50%;
-    background: #ccc;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    cursor: pointer;
-    z-index: 999;
-}
-
-.next {
-    bottom: 0;
-}
-
-.prev::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    display: block;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%) rotate(-45deg);
-}
-
-.next::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    display: block;
-    position: absolute;
-    bottom: 35%;
-    left: 50%;
-    transform: translate(-50%) rotate(135deg);
-}
-
-/* .d-none{
-    display: none;
-} */
-
-.active {
+    max-width: 1000px;
+    margin: auto;
+    height: 400px;
     display: flex;
 }
 
+.img-big{
+    width: 70%;
+    position: relative;
+}
 
+.text-img-big{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    padding: 20px;
+}
 
- 
+.all-img-right{
+    width: 30%;
+    position: relative;
+}
 
+.img-small{
+    height: calc(100% / 5);
+}
+
+.img-big img, .img-small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    left: calc(50% - 15px);
+    border-radius: 100%;
+    border: none;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.prev-btn{
+    top: 15px;
+}
+
+.next-btn{
+    bottom: 15px;
+}
+
+.img-small.active {
+    border: 3px solid #fff;
+}

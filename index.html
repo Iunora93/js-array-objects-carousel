@@ -4,28 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carosello Array di Oggetti</title>
+    <title>Carosello Array di Oggetti-ELE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <template id="template-image">   
-            <div class="container-image">
-                <div class="img-left">
-                    <img class="image-left" src="img/01.webp" alt="webp">
-                </div>
-                <div class="img-right">   
-                    <div class="prev"></div>        
-                    <img src="img/01.webp" alt="">
-                    <img src="img/02.webp" alt="">
-                    <img src="img/03.webp" alt="">
-                    <img src="img/04.webp" alt="">
-                    <img src="img/05.webp" alt=""> 
-                    <div class="next"></div>            
-                </div>
+
+        <div class="img-big">
+            
+        </div>
+
+        <div class="all-img-right">
+            <button class="prev-btn" type="button">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+            <button class="next-btn"  type="button">
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>           
+        </div>
+
+    </div>
+    <!-- template image big -->
+    <template id="img-big">
+        <img src="img/01.webp" alt="">
+            <div class="text-img-big">
+                <h3>Marvel's Spiderman Miles Morale</h3>
+                <p>Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.</p>
             </div>
-        </template>
-   </div>
+    </template>
+    <!-- /template image big -->
+
+    <!-- template image small -->
+    <template id="all-img-right">
+        <div class="img-small">
+            <img src="img/01.webp" alt="">
+        </div>
+    </template>
+    <!-- /template image small -->
+
     <script src="js/main.js"></script>
 </body>
 </html>
